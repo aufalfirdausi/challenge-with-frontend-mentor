@@ -5,17 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bento</title>
 </head>
+<style>
+    body{
+        background: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .container{
+        display: grid;
+            grid-template-areas: 
+            "item1 item2 item3"
+                "item4 item5"
+            "item6 item7 item8";
+        grid-template-columns: 1fr 1.5fr 1fr;
+        gap:20px;
+        max-width: 1000px;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+    }
+    .item1{
+        font-size: larger;
+        background: rgb(255, 235, 210);
+        max-width: 400px;
+        max-height: 600px;
+    }
+
+</style>
 <body>
     <div class="container">
         <div class="item1">
-        <div class="creat"><h2>Creat and schedule content <span class="highlight">quicker</span></h2></div>
-        <img src="illustration-create-post.webp" alt="creat-post">
+            <h2 class="creat">Creat and schedule content <em>quicker</em></h2>
+            <img src="illustration-create-post.webp" alt="creat-post">
     </div>
         <div class="item2">
-            <div class="social">
-            
-            </div>
+            <h1>Social Media 10x Faster With Ai</h1>
+            <img src="illustration-five-stars.webp" alt="five stars">
+            <span class="description-star">Over 4,000 5-star reviewrs</span>
         </div>
+    <div class="item3">
+        <h3>Schedule to social media.</h3>
+        <img class="schedule" src="illustration-schedule-posts.webp" alt="schedule">
+        <span class="description-schedule">Optimize post timings to publish content at the perfect time for your audience</span>
+    </div>
+    <div class="item4">
+        <img src="illustration-multiple-platforms.webp" alt="">
+        <h3>Manage multiple accounts and platfroms.</h3>
+    </div>
+    <div class="item5">
+        <h3>Maintain a consistent posting schedule</h3>
+    </div>
+    <div class="item6">
+        <h1>Write your content using AI</h1>
+        <img src="illustration-ai-content.webp" alt="ilustration ai">
+    </div>
+    <div class="item7">
+        <span class="value-persen"><h1>>56%</h1></span>
+        <span>faster audience growth</span>
+        <img src="illustration-audience-growth.webp" alt="audience">
+    </div>
+    <div class="item8">
+        <img src="illustration-grow-followers.webp" alt="grow follower">
+        <span class="description-growfollowers"><h1>Grow followers with non-stop content.</h1></span>
+    </div>
     </div>
 </body>
 </html>
