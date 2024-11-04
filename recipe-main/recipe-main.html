@@ -33,6 +33,22 @@
     h2{
         color: rgb(113, 82, 79);
     }
+    .nutrition{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content:space-around;
+    }
+    .item{
+        flex: 1 1 44%;
+        padding: 0px;
+    }
+    hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid rgb(142, 140, 140);
+    margin: 10px 0;
+}
 </style>
 <body>
     <div class="recipe-omelete">
@@ -68,8 +84,18 @@
     <h2 class="subjudul-order">Nutrition</h2>
     <p>The table below shows nutritional values per serving without the addtional fillings.</p>
      
-    <div>
-        
+    <div class="nutrition">
+        <div class="item">Calories</div>
+        <div class="item">277kcal</div>
+        <hr>
+        <div class="item">Carbs</div>
+        <div class="item">0g</div>
+        <hr>
+        <div class="item">Protein</div>
+        <div class="item">20g</div>
+        <hr>
+        <div class="item">Fat</div>
+        <div class="item">22g</div>
     </div>
 </div>
 </div>
