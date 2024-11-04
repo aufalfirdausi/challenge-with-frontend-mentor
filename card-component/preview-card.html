@@ -7,7 +7,7 @@
 </head>
 <style>
     body{
-        background: rgb(6, 6, 62);
+        background: rgb(13, 15, 47);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -17,7 +17,7 @@
         max-width: 380px;
             max-width: 50px auto;
             height: auto;
-            background-color: rgb(36, 36, 95);
+            background-color: rgb(10, 41, 67);
             color: whitesmoke;
             padding: 20px;
             border-radius: 20px;
@@ -30,25 +30,58 @@
     .little-decription{
         opacity: 0.4;
     }
-    .cristal{
-        color: aqua;
-    }
+        .item-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.cristal, .time {
+  display: flex;
+  align-items: center;
+  padding: 25px 0px 13px 0px;
+}
+
+.icon {
+  margin-right: 5px; 
+}
+.avatar{
+    width: 10%;
+
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.copyright{
+    padding-left: 25px;
+}
+.creation{
+    opacity: 0.5;
+    padding-right:5px;
+}
     
 </style>
 <body>
     <div class="preview-card">
     <img class="qubik" src="image-equilibrium.jpg" alt="qubik" >
     <h2>Equilibrium #3429</h2>
-    <p class="little-decription">Our Equilibirium collection promotes balance and calm.</p>
-    <div class="cristal">
-        <svg width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg>
-        <p>0.041ETH</p>
-    </div>
-    <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg>
-    <p> 3 days left</p>
+    <span class="little-decription">Our Equilibirium collection promotes balance and calm.</span>
+    <div class="item-container">
+        <div class="cristal">
+          <span class="icon"><svg class="icon" width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg></span>
+          <span style="color: aqua;" class="value">0.041ETH</span>
+        </div>
+        <div class="time">
+          <spans style="color: grey;" class="icon"><svg class="icon" width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg></span>
+          <span class="value">3 days</span>
+        </div>
+      </div>
     <hr>
-    <img src="image-avatar.png" alt="avatar">
-    <p>Creation of Jules Wyvern</p>
+    <div class="profile">
+    <img class="avatar" src="image-avatar.png" alt="avatar">
+    <p class="copyright"> <p class="creation"> Creation of </p>Jules Wyvern</p>
+    </div>
 </div>
 </body>
 </html>
