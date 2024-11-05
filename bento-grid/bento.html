@@ -6,68 +6,120 @@
     <title>bento</title>
 </head>
 <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial,sans-serif;
+    }
     body{
-        background: white;
-        font-family: Arial, sans-serif;
+    background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-sizing: border-box;
+        height: 100vh;
     }
     .container{
         display: grid;
             grid-template-areas: 
-            "item1 item2 item3"
-                "item4 item5"
-            "item6 item7 item8";
-        grid-template-columns: 1fr 1.5fr 1fr;
+            "item1 item2 item2 item3"
+            "item1 item2 item2 item3"
+            "item1 item4 item5 item3"
+            "item6 item7 item8 item8";
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-rows:repeat(4, ifr);
         gap:20px;
-        max-width: 1000px;
+        max-width: 1200px;
         padding: 20px;
+        width: 100%;
+    }
+    .box{
+    padding: 20px;
+        border-radius: 8px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2em;
         text-align: center;
-        position: relative;
-    }
+  }
     .item1{
-        font-size: larger;
-        background: rgb(255, 235, 210);
-        max-width: 400px;
-        max-height: 600px;
+        grid-area: item1;
+        background-color: bisque;
+        color: black;
     }
-
+    .item2{
+        grid-area: item2;
+        background-color: plum;
+    }
+    .item3{
+        grid-area: item3;
+        background-color: purple;
+        color: black;
+    }
+    .item4{
+        grid-area: item4;
+        background-color:beige;
+        color: black;
+    }
+    .item5{
+        grid-area: item5;
+        background-color: #fff;
+        color: #000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .item6{
+        grid-area: item6;
+        background-color: blanchedalmond;
+        color: black;
+    }
+    .item7{
+        grid-area:item7 ;
+        background-color: #fff;
+        color: #000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .item8{
+        grid-area: item8;
+        background-color: plum;
+    }
+    h1{
+        font-size: larger;
+        font-size: 300%;
+    }
 </style>
 <body>
     <div class="container">
-        <div class="item1">
-            <h2 class="creat">Creat and schedule content <em>quicker</em></h2>
+        <div class="box item1">
+            <h1> Creat and schedule content <em>quicker</em></h1>
             <img src="illustration-create-post.webp" alt="creat-post">
     </div>
-        <div class="item2">
+        <div class="box item2">
             <h1>Social Media 10x Faster With Ai</h1>
             <img src="illustration-five-stars.webp" alt="five stars">
             <span class="description-star">Over 4,000 5-star reviewrs</span>
         </div>
-    <div class="item3">
+    <div class="box item3">
         <h3>Schedule to social media.</h3>
         <img class="schedule" src="illustration-schedule-posts.webp" alt="schedule">
         <span class="description-schedule">Optimize post timings to publish content at the perfect time for your audience</span>
     </div>
-    <div class="item4">
+    <div class="box item4">
         <img src="illustration-multiple-platforms.webp" alt="">
         <h3>Manage multiple accounts and platfroms.</h3>
     </div>
-    <div class="item5">
+    <div class="box item5">
         <h3>Maintain a consistent posting schedule</h3>
+        <img src="illustration-consistent-schedule.webp" alt="calender">
     </div>
-    <div class="item6">
+    <div class="box item6">
         <h1>Write your content using AI</h1>
         <img src="illustration-ai-content.webp" alt="ilustration ai">
     </div>
-    <div class="item7">
+    <div class="box item7">
         <span class="value-persen"><h1>>56%</h1></span>
         <span>faster audience growth</span>
         <img src="illustration-audience-growth.webp" alt="audience">
     </div>
-    <div class="item8">
+    <div class="box item8">
         <img src="illustration-grow-followers.webp" alt="grow follower">
         <span class="description-growfollowers"><h1>Grow followers with non-stop content.</h1></span>
     </div>
