@@ -3,194 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>social prof</title>
+    <title>Testimonial Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 40px;
+        }
+
+        .header {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .header h1 {
+            color: #4a235a;
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .ratings {
+            flex: 1;
+            display: flex;
+            flex-direction:column;
+            justify-content: right;
+            gap: 15px;
+            max-width: 500px;
+        }
+
+        .rating-item {
+            background-color: rgb(248, 235, 248);
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .rating-item:nth-child(1) {
+            margin-right: 80px;
+        }
+
+        .rating-item:nth-child(2) {
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+
+        .rating-item:nth-child(3) {
+            margin-left: 80px;
+        }
+
+        .stars {
+           
+            margin-right: 15px;
+        }
+
+        .rating-text {
+            color: #4a235a;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .testimonial-card {
+            background-color: #4a235a;
+            padding: 30px;
+            border-radius: 12px;
+            color: white;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .user-avatar  img {
+            width: 40px;
+            border-radius: 50px;
+            margin-right: 12px;
+            
+        }
+
+        .user-details h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .user-details p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+    </style>
 </head>
-<style>
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    :root {
-        --purple-100:rgb(64,0,64);
-        --purple-200:rgb(255,158,255);
-        --purple-300:rgb(176,8,140);
-        --grey-100:rgb(110,110,110);
-        --white:var(--white);
-
-    }
-    body{
-        background-color: whitesmoke;
-        min-height: 100vh;
-        font-family: 'DM Sans';
-        font-size: 18px;
-        line-height: 1;
-        display: grid;
-        place-content:center;
-    }
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    .header{
-        margin-bottom: 40px;
-    }
-    .header h1 {
-        color:var(--purple-100);
-        margin-bottom: 20px;
-        font-weight: bold;
-        font-size: 42px;
-    }
-    .header p {
-        font-size: 16px;
-        line-height: 1.6;
-        color:var(--grey-100)
-    }
-    .rating{
-        margin-bottom: 40px;
-    }
-    .rating-stars {
-        background-color: var(--purple-200);
-        padding: 12px 20px;
-        border-radius: 8px;
-        margin-bottom: 12px;
-        display: flex;
-        align-items: center;
-    }
-    .rating-text {
-        color: var(--white);
-        font-size: 14px;
-    }
-    .testimonial {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-    .testimonial-card {
-        background-color: #4a235a;
-        padding:30px;
-        border-radius: 12px;
-        color: var(--white);
-    }
-    .user-info{
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-    .user-avatar {
-        width:40px;
-        height:40px;
-        margin-right: 12px;
-        border-radius: 50%;
-        background-color:var(--white) ;
-    }
-    .user-details h3 {
-        font-size: 15px;
-        margin-bottom: 4px;
-    }
-    .user-details p {
-        font-size: 12px;
-        opacity: 0.8;
-    }
-    .testimonial-text {
-        font-size:14px;
-        line-height: 1.6px;
-    }
-    @media (max-width:970px) {
-        .testimonial {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-    @media (max-width:670px) {
-        .testimonial {
-            grid-template-columns: 1fr;
-        }
-    }
-
-</style>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="judul"><h1>10,000+<br>users love ours<br>products.</h1>
+        <div class="top-section">
+            <div class="header">
+                <h1>10,000+ of our<br>users love our<br>products.</h1>
+                <p>We only provide great products combined with excellent<br>customer service. See what our satisfied customers are<br>saying about our services.</p>
             </div>
-                <div class="subjudul"><p>We only provide great product combined with excellent<br>
-                customer sercice.See what our statisfied customers are<br>
-                saying about our service.</p>
-                </div>
-        </div>
-        <div class="rating">
-        <div class="rating-stars">
-            <div class="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-            </div>
-            <div class="rating-text">Rated 5 stars in Reviews</div>
-        
-            <div class="rating-stars">
-            <div class="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-            </div>
-            <div class="rating-text">Rated 5 stars in Report Guru</div>
-        
-            <div class="rating-stars">
-            <div class="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-                <img src="icon-star.svg" alt="stars">
-            </div>
-            <div class="rating-text">Rated 5 stars in BestTeach</div>
-        </div>
-        </div> 
-    </div>
 
-        <div class="testimonial">
+            <div class="ratings">
+                <div class="rating-item">
+                    <div class="stars">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                    </div>
+                    <div class="rating-text">Rated 5 Stars in Reviews</div>
+                </div>
+                <div class="rating-item">
+                    <div class="stars">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                    </div>
+                    <div class="rating-text">Rated 5 Stars in Report Guru</div>
+                </div>
+                <div class="rating-item">
+                    <div class="stars">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                        <img src="icon-star.svg" alt="">
+                    </div>
+                    <div class="rating-text">Rated 5 Stars in BestTech</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonials">
             <div class="testimonial-card">
                 <div class="user-info">
-                    <div class="user-avatar"></div>
+                    <div class="user-avatar">
+                        <img src="image-colton.jpg" alt="">
+                    </div>
                     <div class="user-details">
                         <h3>Colton Smith</h3>
                         <p>Verified Buyer</p>
                     </div>
                 </div>
-                <p class="testimonial-text">"We needed the same printed design as the one had ordered a week prior. Not only did they find the original order, but we also received it in time. Execellent!"</p>
+                <p class="testimonial-text">" We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent! "</p>
             </div>
 
             <div class="testimonial-card">
                 <div class="user-info">
-                    <div class="user-avatar"></div>
+                    <div class="user-avatar"><img src="image-irene.jpg" alt=""></div>
                     <div class="user-details">
                         <h3>Irene Roberts</h3>
-                        <p>Verfied Buyer</p>
+                        <p>Verified Buyer</p>
                     </div>
                 </div>
-                <p class="testimonial-text">"Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery."</p>
+                <p class="testimonial-text">" Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery. "</p>
             </div>
 
             <div class="testimonial-card">
                 <div class="user-info">
-                    <div class="user-avatar"></div>
+                    <div class="user-avatar"><img src="image-anne.jpg" alt=""></div>
                     <div class="user-details">
-                        <h3>Anne Wallace </h3>
-                        <p>Verfied Buyer</p>
+                        <h3>Anne Wallace</h3>
+                        <p>Verified Buyer</p>
                     </div>
                 </div>
-                <p class="testimonial-text">"Put an order with this company and can only praise them fot the very high standard. Will definitely use them again and recommended them to everyone!."</p>
+                <p class="testimonial-text">" Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone! "</p>
             </div>
         </div>
-        
     </div>
-
-
 </body>
 </html>
